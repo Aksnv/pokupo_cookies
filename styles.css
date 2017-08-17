@@ -5,8 +5,9 @@
 }
 
 .cookies {
-  position: relative;
+  position: absolute;
   display: none;
+  width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -33,7 +34,9 @@
 
 .cookies__close-button {
   position: absolute;
-  top: 17px;
+  top: 0;
+  bottom: 0;
+  /* top: 17px; */
   right: 70px;
   font-size: 18px;
   line-height: 24px;
@@ -41,7 +44,23 @@
   background-color: transparent;
   color: #ffa800;
   border: none;
-  border-bottom: 1px solid #ffa800;
+  /* border-bottom: 1px solid #ffa800; */
   outline: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+
+  .cookies {
+    padding-right: 150px;
+  }
+
+  .cookies span {
+    display: none;
+  }
+
+  .cookies__close-button {
+    right: 40px;
+  }
+
 }
